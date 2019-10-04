@@ -24,8 +24,12 @@ Auth::routes();
 
     // Route::get('/', 'HomeController@index')->name('home');
 
-
+    Route::resource('cities','CitiesController');
+    Route::resource('categories','CategoriesController');
+    Route::resource('foods','FoodsController');
+    
 Route::group(['prefix'=>'back'],function(){
     Route::get('/', 'Admin\DashboardController@index');
 }
+
 );
